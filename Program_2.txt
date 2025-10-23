@@ -1,0 +1,172 @@
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git branch b1
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git branch b2
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git branch
+  b1
+  b2
+* main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git checkout b1
+Switched to branch 'b1'
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ git status
+On branch b1
+nothing to commit, working tree clean
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ echo "in branch b1 hello world" >> lab3.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ echo "in branch b1 branching world" >> lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ git add lab3.c
+warning: in the working copy of 'lab3.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ git add lab4.c
+warning: in the working copy of 'lab4.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ git commit -m " lab3 for b1"
+[b1 b25966c]  lab3 for b1
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lab3.c
+ create mode 100644 lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b1)
+$ git checkout b2
+Switched to branch 'b2'
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+$ git branch
+  b1
+* b2
+  main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+$ echo "in branch b2 hello world" >> lab5.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+Merge branch 'b1' into b2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ lab3.c | 1 +
+ lab4.c | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lab3.c
+ create mode 100644 lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+$ ls
+README.md  lab1.txt  lab3.c  lab4.c  lab5.c  lab6.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+$ git commit -m "Files are merged"
+On branch b2
+nothing to commit, working tree clean
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (b2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git merge b2
+Updating bc6dbaa..1611101
+Fast-forward
+ lab3.c | 1 +
+ lab4.c | 1 +
+ lab5.c | 1 +
+ lab6.c | 1 +
+ 4 files changed, 4 insertions(+)
+ create mode 100644 lab3.c
+ create mode 100644 lab4.c
+ create mode 100644 lab5.c
+ create mode 100644 lab6.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git push main origin
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git push main origin
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$ git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 835 bytes | 835.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Sagar-1972/3VC24CS114.git
+   bc6dbaa..1611101  main -> main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24CS114 (main)
+$
